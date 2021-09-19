@@ -1,17 +1,15 @@
+let page = 0;
+
 document.getElementById("loginForm").addEventListener("submit",(event)=>{
     event.preventDefault()
-    console.log(medico+" paciente: "+paciente)
 })
 
 firebase.auth().onAuthStateChanged((user)=>{
-    let paciente = document.getElementById("paciente").checked
-    let medico = document.getElementById("medico").checked
-    console.log(medico+" paciente: "+paciente)
     if(user){
-        if(medico){
+        if(page == 1){
             location.replace("welcome_medico.html")
         }
-        else if(paciente){
+        else if(page == 2){
             location.replace("welcome_paciente.html")
         }
     }
@@ -30,6 +28,8 @@ function login(){
                 var user = userCredential.user;
                 // ...
                 alert('Usuario logado');
+                if(medico) page = 1;
+                else page = 2;
             })
             .catch((error) => {
                 var errorCode = error.code;
