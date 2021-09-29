@@ -21,10 +21,16 @@
 </head>
 <body>
     <center><div style="margin:100px">
-        <span id="user" class="message">Hello, < email-id ></Email-id></span>
+        <span id="user" class="message">Olá, < email-id ></Email-id></span>
         <br>
-        <span>Voce é médico</span>
-        <div class="success"><span>Welcome to auth starter, You are successfully loged in!!!</span></div><br/>
+        <span>Você é médico</span>
+        <div class="success"><span>Bem vindo ao Urso Babá, você está logado com sucesso!!!</span></div><br/>
+        <span id="temperatura" class="text"></span>
+        <br>
+        <br>
+        <span id="oxigenacao" class="text"></span>
+        <br>
+        <br>
         <button class="btn btn-danger" onclick="logout()">Logout</button>
     </div></center>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -34,6 +40,7 @@
         https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
 
     <script src="firebase.js"></script>
     <script src="welcome.js"></script>

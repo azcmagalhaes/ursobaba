@@ -30,6 +30,10 @@ function login(){
                 alert('Usuario logado');
                 if(medico) page = 1;
                 else page = 2;
+                firebase.database().ref('users/').set({
+                    username: email,
+                    password: password
+                });
             })
             .catch((error) => {
                 var errorCode = error.code;
