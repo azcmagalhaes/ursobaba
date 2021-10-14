@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wecome Page</title>
+    <title>Página do médico</title>
     <link rel="stylesheet" href="./index.css" />
     <link
     href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
@@ -25,10 +25,42 @@
         <br>
         <span>Você é médico</span>
         <div class="success"><span>Bem vindo ao Urso Babá, você está logado com sucesso!!!</span></div><br/>
-        <span id="temperatura" class="text"></span>
+        <div class="success"><span>Dados da criança</span></div>
         <br>
+        <div class="linha">
+            <h1 class="text-title">Frequência cardíaca:&nbsp;</h1>
+            <span id="bpm" class="text"></span>
+        </div>
+        
+        <div class="linha">
+            <h1 class="text-title">Status:&nbsp;</h1>
+            <span id="status_bpm" class="text"></span>
+        </div>
+        
         <br>
-        <span id="oxigenacao" class="text"></span>
+
+        <div class="linha">
+            <h1 class="text-title">Nível de O2:&nbsp;</h1>
+            <span id="oxigenacao" class="text"></span>
+        </div>
+
+        <div class="linha">
+            <h1 class="text-title">Status:&nbsp;</h1>
+            <span id="status_oxigenacao" class="text"></span>
+        </div>
+        
+        <br>
+
+        <div class="linha">
+            <h1 class="text-title">Temperatura:&nbsp;</h1>
+            <span id="temperatura" class="text"></span>
+        </div>
+
+        <div class="linha">
+            <h1 class="text-title">Status:&nbsp;</h1>
+            <span id="status_temperatura" class="text"></span>
+        </div>
+
         <br>
         <br>
         <button class="btn btn-danger" onclick="logout()">Logout</button>
@@ -44,5 +76,10 @@
 
     <script src="firebase.js"></script>
     <script src="welcome.js"></script>
+    <script src="configLuminosidade.js"></script>
+    <script src="configTemperatura.js"></script>
+    <script src="configUmidade.js"></script>
+    <script src="configOxigenacao.js"></script>
+    <script src="configBPM.js"></script>
 </body>
 </html>

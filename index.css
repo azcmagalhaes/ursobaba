@@ -62,8 +62,24 @@ body {
   color: rgb(0, 217, 255);
 }
 
+.text-title {
+  font-size: 18px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb(0, 126, 148);
+}
+
 .voltar {
   position: absolute;
   top: 10px;
   left: 10px;
+}
+
+.linha {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.column-50 {
+  width: 50%;
 }
