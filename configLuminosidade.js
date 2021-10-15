@@ -10,6 +10,10 @@ function desliga_lamp(){
     document.getElementById("desliga_lamp").style.display = "none";
     document.getElementById("inputMudarLuminosidade").style.display = "none";
     document.getElementById("labelMudarLuminosidade").style.display = "none";
+    let url = "http://blynk-cloud.com/UOkDPhjPX45piUnTtMbQMKjpZiPx-_D0/update/V1?value=11"
+    console.log(url)
+    request.open("PUT", url, false);
+    request.send();
 }
 
 var slider = document.getElementById("inputMudarLuminosidade");
@@ -19,8 +23,9 @@ output.innerHTML = slider.value; // Display the default slider value
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
     output.innerHTML = this.value;
-    console.log("http://blynk-cloud.com/UOkDPhjPX45piUnTtMbQMKjpZiPx-_D0/update/V1?value="+this.value)
-    request.open("GET", "http://blynk-cloud.com/UOkDPhjPX45piUnTtMbQMKjpZiPx-_D0/update/V1?value="+this.value, false);
+    let url = "http://blynk-cloud.com/UOkDPhjPX45piUnTtMbQMKjpZiPx-_D0/update/V1?value="+this.value
+    console.log(url)
+    request.open("PUT", url, false);
     request.send();
 }
 

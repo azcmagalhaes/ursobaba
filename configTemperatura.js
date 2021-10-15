@@ -27,6 +27,12 @@ function getTemperaturaCrianca(){
     }
 }
 
+function getFeedbackTemp(){
+    let data = fazGet("http://blynk-cloud.com/UOkDPhjPX45piUnTtMbQMKjpZiPx-_D0/get/V27");
+    let data2 = fazGet("http://blynk-cloud.com/UOkDPhjPX45piUnTtMbQMKjpZiPx-_D0/get/V28");
+    console.log(data+" "+data2)
+}
 
+getFeedbackTemp()
 getTemperatura()
 getTemperaturaCrianca()
