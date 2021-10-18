@@ -27,7 +27,7 @@
         <div class="success"><span>Bem vindo ao Urso Babá, você está logado com sucesso!!!</span></div><br/>
         <div class="linha">
             <div  class="column-50">
-                <div class="success"><span>Iluminação Ambiente</span></div>
+                <div><span class="text-2">Iluminação Ambiente</span></div>
                 <br>
                 <span id="luminosidade" class="text"></span>
                 <br><br>
@@ -36,18 +36,32 @@
                 <br>
                 <div class="linha">
                     <label id="labelMudarLuminosidade" style="display: none;"></label><br>
-                    <input type="range" min="0" max="11" value="0" id="inputMudarLuminosidade" style="display: none;">
+                    <input type="range" min="0" max="10" value="0" id="inputMudarLuminosidade" style="display: none;">
                 </div>
                 <br>
-                <div class="success"><span>Dados do Ambiente</span></div>
+                <div><span class="text-2">Dados do Ambiente</span></div>
                 <br>
-                <span id="temperatura_ambiente" class="text"></span>
+
+                <div class="linha">
+                    <h1 class="text-title">Temperatura ambiente:&nbsp;</h1>
+                    <span id="temperatura_ambiente" class="text"></span>
+                </div>
+
+                <div class="linha">
+                    <h1 class="text-title">Status:&nbsp;</h1>
+                    <span id="status_temperatura_ambiente" class="text"></span>
+                </div>
+                
                 <br>
-                <span id="umidade_ambiente" class="text"></span>
+                <div class="linha">
+                    <h1 class="text-title">Umidade ambiente:&nbsp;</h1>
+                    <span id="umidade_ambiente" class="text"></span>    
+                </div>
+                
                 <br>
             </div>
             <div class="column-50">
-                <div class="success"><span>Dados da criança</span></div>
+                <div><span class="text-2">Dados da criança</span></div>
                 <br>
                 <div class="linha">
                     <h1 class="text-title">Frequência cardíaca:&nbsp;</h1>
